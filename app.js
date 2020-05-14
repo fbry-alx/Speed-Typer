@@ -49,3 +49,22 @@ const words = [
   'smiling',
   'meeting'
 ];
+
+let score = 0;
+let time = 10;
+
+
+/* generate random word */
+function getRandomWord() {
+  return words[Math.floor(Math.random() * words.length)];
+};
+
+/* add word back to main */
+let randomWord;
+
+function addWordBack() {
+  randomWord = getRandomWord();
+  word.textContent = randomWord;
+  word.classList.remove('correct', 'incorrect');
+};
+addWordBack();
