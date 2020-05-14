@@ -124,3 +124,29 @@ text.addEventListener('input', function () {
     event.target.value = null;
   }
 });
+
+/* Switch background colors button */
+let color = ['#74b9ff', '#6c5ce7', '#ff7675', '#ffeaa7', '#00b894', '#fd79a8', '#636e72', '#ff0b55',];
+let colorI = 0;
+colorSwitch.addEventListener('click', function () {
+  if (colorI < color.length - 1) {
+    colorI++;
+  } else {
+    colorI = 0;
+  }
+  document.body.style.background = color[colorI];
+  headingTwo.style.color = color[colorI];
+});
+
+/* open rules */
+rulesBtn.addEventListener('click', function () {
+  rulesDiv.style.display = 'flex';
+});
+
+/* close rules */
+closeBtn.addEventListener('click', function () {
+  rulesDiv.style.display = 'none';
+});
+
+/* focus on input text when reload page */
+text.focus();
