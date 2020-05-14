@@ -68,3 +68,17 @@ function addWordBack() {
   word.classList.remove('correct', 'incorrect');
 };
 addWordBack();
+
+/* update score */
+function updateScore() {
+  score++;
+  scoreEl.textContent = `Score: ${score}`;
+};
+
+/* start the timer countdown */
+let runTime = false;
+text.addEventListener('keydown', function () { // keydown in input starts timer
+  if (runTime === false) { //
+    runTime = setInterval(updateTime, 1000);
+  }
+});
