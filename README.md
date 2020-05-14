@@ -1,6 +1,6 @@
 # Project-Zero
 
-# User Stories:
+## User Stories:
 
 - The game is a very simple version of a speed typing game. You get a random word to type in the input as fast as you can.
 
@@ -15,11 +15,11 @@
 - When the time is up there is a window with the total of your score.
 
 
-# Wireframe
+## Wireframe
 
 
 
-# Stretch Goals:
+## Stretch Goals:
 
 - Start timer only when user starts typing
 
