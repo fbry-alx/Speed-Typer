@@ -11,6 +11,30 @@
 
 <body>
 
+  <button class="rules-btn" oncontextmenu="">Rules</button>
+  <!-- <button class="levels-btn">Levels</button> -->
+  <button class="switch-color-btn">Switch Color</button>
+
+  <div class="main">
+    <h2>Speed Typer</h2>
+    <h4>Type this <i class="fas fa-arrow-down"></i></h4>
+    <h1 class="word">Test</h1>
+    <input type="text" id="text" placeholder="Type here:">
+    <p id="time">Time: <span class="time">10sec</span></p>
+    <p id="score">Score: <span class="score">0</span></p>
+    <div class="end-game"></div>
+  </div>
+
+  <div id="rules">
+    <button id="close">&times;</button>
+    <h4>Rules:</h4>
+    <ul>
+      <li>Timer begins when you start typing.</li>
+      <li>Spell out the word correctly to add score & time.</li>
+      <li>If the word is correct, it will appear <span class="green">green.</span></li>
+      <li>If the word is incorrect, it will appear <span class="red">red.</span></li>
+    </ul>
+  </div>
 
   <script src="app.js"></script>
 </body>
