@@ -82,3 +82,45 @@ text.addEventListener('keydown', function () { // keydown in input starts timer
     runTime = setInterval(updateTime, 1000);
   }
 });
+
+/* update time */
+function updateTime() {
+  time--; // time goes down by 1 sec
+  timeEl.textContent = `Time: ${time}s`;
+
+  if (time === 0) {
+    clearInterval(runTime); // time stays at 0
+    gameOver();
+  }
+};
+
+/* game over */
+function gameOver() {  // dispaly gameover empty div with score and restart button
+  endgameEl.innerHTML = `
+  <h1>Time is up!</h1> 
+  <p>Your final score is ${score}</p>
+  <button onclick=location.reload()>Restart</button>`;
+  endgameEl.style.display = 'flex';
+};
+
+/* event listener to the text input */
+text.addEventListener('input', function () {
+  const textInsert = event.target.value;
+
+  if (textInsert === randomWord) { // when word matches: 
+    updateScore(); // score goes up by 1
+    event.target.value = null; // clear input
+    time += 2; // add more secs to time
+    updateTime();
+
+    // highlight correct/incorrect word yped
+    word.classList.add('correct'); // add css class green
+    setTimeout(addWordBack, 300); // return to regular word color
+    word.classList.remove('incorrect'); // add css class red
+  } else if (textInsert.length === randomWord.length) {
+    word.classList.remove('correct');
+    word.classList.add('incorrect');
+    setTimeout(addWordBack, 300);
+    event.target.value = null;
+  }
+});
