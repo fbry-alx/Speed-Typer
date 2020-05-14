@@ -15,6 +15,11 @@
 - When the time is up there is a window with the total of your score.
 
 
+# Wireframe
+
+![alt text] (file:///Users/fbryalx/Desktop/Screen%20Shot%202020-05-13%20at%208.53.16%20AM.png)
+
+
 # Stretch Goals:
 
 - Start timer only when user starts typing
