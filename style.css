@@ -106,15 +106,15 @@ button:focus{
   outline: 0;
 }
 
-.rules-btn {
+#rules-btn {
 position: absolute;
 top: 0;
-left: 5px;
-font-size: 12px;
+left: 10px;
+font-size: 25px;
 color: #000;
 background-color: rgba(0, 0, 0, 0);
-
 }
+
 
 /* .levels-btn {
   position: absolute;
@@ -125,11 +125,11 @@ background-color: rgba(0, 0, 0, 0);
   background-color: rgba(0, 0, 0, 0);
 } */
 
-.switch-color-btn {
+#switch-color-btn {
 position: absolute;
 top: 0;
 left: 70px;
-font-size: 12px;
+font-size: 25px;
 color: #000;
 background-color: rgba(0, 0, 0, 0);
 }

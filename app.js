@@ -4,8 +4,8 @@ const scoreEl = document.getElementById('score');
 const timeEl = document.getElementById('time');
 const endgameEl = document.querySelector('.end-game');
 const headingTwo = document.querySelector('h2');
-const colorSwitch = document.querySelector('.switch-color-btn');
-const rulesBtn = document.querySelector('.rules-btn');
+const colorSwitch = document.getElementById('switch-color-btn');
+const rulesBtn = document.getElementById('rules-btn');
 const rulesDiv = document.getElementById('rules');
 const closeBtn = document.getElementById('close');
 
