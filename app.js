@@ -6,8 +6,11 @@ const endgameEl = document.querySelector('.end-game');
 const headingTwo = document.querySelector('h2');
 const colorSwitch = document.getElementById('switch-color-btn');
 const rulesBtn = document.getElementById('rules-btn');
+const levelsBtn = document.getElementById('levels-btn');
 const rulesDiv = document.getElementById('rules');
 const closeBtn = document.getElementById('close');
+const closeStng = document.getElementById('close-settings');
+const settings = document.getElementById('settings');
 
 
 /* words array */
@@ -118,6 +121,17 @@ rulesBtn.addEventListener('click', function () {
 /* close rules */
 closeBtn.addEventListener('click', function () {
   rulesDiv.style.display = 'none';
+});
+
+
+/* open settings */
+levelsBtn.addEventListener('click', function () {
+  settings.style.display = 'flex';
+});
+
+/* close settings */
+closeStng.addEventListener('click', function () {
+  settings.style.display = 'none';
 });
 
 /* focus on input text when reload page */
