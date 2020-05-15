@@ -115,7 +115,7 @@ colorSwitch.addEventListener('click', function () {
 
 /* open rules */
 rulesBtn.addEventListener('click', function () {
-  rulesDiv.style.display = 'flex';
+  rulesDiv.style.display = 'flex'; // rules pop up on click of scroll icon
 });
 
 /* close rules */
@@ -125,14 +125,13 @@ closeBtn.addEventListener('click', function () {
 
 /* open settings */
 levelsBtn.addEventListener('click', function () {
-  settings.style.display = 'flex';
+  settings.style.display = 'flex'; // settings pop up on click of cog icon
 });
 
 /* close settings */
 closeStng.addEventListener('click', function () {
   settings.style.display = 'none';
 });
-
 
 /* Select settings */
 const easy = document.getElementById('easy');
@@ -144,23 +143,12 @@ easy.addEventListener('click', function () {
 });
 
 medium.addEventListener('click', function () {
-  if (easy === true) {
-    time += 2; //add 2 secs to start timer
-  }
+  time += 2; //add 2 secs to start timer
 });
 
 hard.addEventListener('click', function () {
-  if (easy === true) {
-    time += 1; // add 1 sec to start timer 
-  }
+  time += 1; // add 1 sec to start timer 
 });
 
 /* focus on input text when reload page */
 text.focus();
-
-
-
-
-
-
-
