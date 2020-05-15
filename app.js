@@ -33,7 +33,7 @@ function getRandomWord() {
   return words[Math.floor(Math.random() * words.length)];
 };
 
-/* add word back to main */
+/* add word back to main div */
 let randomWord;
 
 function addWordBack() {
@@ -123,7 +123,6 @@ closeBtn.addEventListener('click', function () {
   rulesDiv.style.display = 'none';
 });
 
-
 /* open settings */
 levelsBtn.addEventListener('click', function () {
   settings.style.display = 'flex';
@@ -133,6 +132,28 @@ levelsBtn.addEventListener('click', function () {
 closeStng.addEventListener('click', function () {
   settings.style.display = 'none';
 });
+
+/* Select settings */
+const easy = document.getElementById('easy');
+const medium = document.getElementById('medium');
+const hard = document.getElementById('hard');
+
+easy.addEventListener('click', function () {
+  time += 5;
+});
+
+medium.addEventListener('click', function () {
+  if (easy === true) {
+    time += 2;
+  }
+});
+
+hard.addEventListener('click', function () {
+  if (easy === true) {
+    time += 1;
+  }
+});
+
 
 /* focus on input text when reload page */
 text.focus();
