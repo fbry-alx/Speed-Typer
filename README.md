@@ -11,7 +11,6 @@
 
 
 ### Wireframe
-<<<<<<< HEAD
 ![wireframe](./images/wireframe.png)
 
 

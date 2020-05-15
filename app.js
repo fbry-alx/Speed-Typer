@@ -12,42 +12,13 @@ const closeBtn = document.getElementById('close');
 
 /* words array */
 const words = [
-  'tacky',
-  'hungry',
-  'drive',
-  'recruit',
-  'scene',
-  'organize',
-  'massive',
-  'skate',
-  'receipt',
-  'brick',
-  'paint',
-  'light',
-  'waves',
-  'silver',
-  'photo',
-  'ignore',
-  'announce',
-  'modern',
-  'purpose',
-  'immerse',
-  'observe',
-  'novel',
-  'sharp',
-  'shatter',
-  'fragile',
-  'strike',
-  'island',
-  'rainy',
-  'permit',
-  'convert',
-  'brash',
-  'thought',
-  'separate',
-  'game',
-  'smiling',
-  'meeting'
+  'tacky', 'hungry', 'drive', 'recruit', 'scene',
+  'organize', 'meeting', 'skate', 'receipt', 'brick',
+  'paint', 'light', 'waves', 'silver', 'photo',
+  'ignore', 'announce', 'modern', 'purpose', 'immerse',
+  'observe', 'novel', 'sharp', 'shatter', 'fragile',
+  'strike', 'island', 'rainy', 'permit', 'convert',
+  'brash', 'thought', 'separate', 'game', 'smiling',
 ];
 
 let score = 0;
@@ -77,7 +48,7 @@ function updateScore() {
 
 /* start the timer countdown */
 let runTime = false;
-text.addEventListener('keydown', function () { // keydown in input starts timer
+text.addEventListener('keydown', function () { // first type in input starts timer
   if (runTime === false) { //
     runTime = setInterval(updateTime, 1000);
   }
@@ -99,11 +70,11 @@ function gameOver() {  // dispaly gameover empty div with score and restart butt
   endgameEl.innerHTML = `
   <h1>Time is up!</h1> 
   <p>Your final score is ${score}</p>
-  <button onclick=location.reload()>Restart</button>`;
+  <button onclick=location.reload() >Restart</button>`;
   endgameEl.style.display = 'flex';
 };
 
-/* event listener to the text input */
+/* event listeners to the text input */
 text.addEventListener('input', function () {
   const textInsert = event.target.value;
 
@@ -113,7 +84,7 @@ text.addEventListener('input', function () {
     time += 2; // add more secs to time
     updateTime();
 
-    // highlight correct/incorrect word yped
+    // highlight correct/incorrect word typed
     word.classList.add('correct'); // add css class green
     setTimeout(addWordBack, 300); // return to regular word color
     word.classList.remove('incorrect'); // add css class red
@@ -126,7 +97,8 @@ text.addEventListener('input', function () {
 });
 
 /* Switch background colors button */
-let color = ['#74b9ff', '#6c5ce7', '#ff7675', '#ffeaa7', '#00b894', '#fd79a8', '#636e72', '#ff0b55',];
+let color = ['#74b9ff', '#6c5ce7', '#ff7675', '#ffeaa7',
+  '#00b894', '#fd79a8', '#636e72', '#ff0b55',];
 let colorI = 0;
 colorSwitch.addEventListener('click', function () {
   if (colorI < color.length - 1) {
@@ -150,3 +122,10 @@ closeBtn.addEventListener('click', function () {
 
 /* focus on input text when reload page */
 text.focus();
+
+
+
+
+
+
+
