@@ -89,12 +89,12 @@ text.addEventListener('input', function () {
 
     // highlight correct/incorrect word typed
     word.classList.add('correct'); // add css class green
-    setTimeout(addWordBack, 300); // return to regular word color
+    setTimeout(addWordBack, 200); // return to regular word color
     word.classList.remove('incorrect'); // add css class red
   } else if (textInsert.length === randomWord.length) {
     word.classList.remove('correct');
     word.classList.add('incorrect');
-    setTimeout(addWordBack, 300);
+    setTimeout(addWordBack, 200);
     event.target.value = null;
   }
 });
