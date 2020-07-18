@@ -70,6 +70,7 @@ input {
   border-radius: 4px;
   padding: 12px 25px;
   font-size: 14px;
+  outline: none;
 }
 
 input:focus {
